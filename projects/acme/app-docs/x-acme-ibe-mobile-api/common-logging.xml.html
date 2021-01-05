@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>x-acme-ibe-mobile-api · Anypoint Studio Documentation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="assets/bootstrap.css" rel="stylesheet">
+    <link href="assets/bootstrap-responsive.css" rel="stylesheet">
+    <link href="assets/docs.css" rel="stylesheet">
+    <link href="assets/prettify.css" rel="stylesheet">
+    <link href="assets/scroller.css" rel="stylesheet">
+
+  </head>
+
+  <body data-twttr-rendered="true" data-spy="scroll" data-target=".bs-docs-sidebar"><iframe style="display: none;" id="rufous-sandbox" name="uid13460061790411"></iframe>
+
+    <!-- Navbar
+    ================================================== -->
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand pull-left" href="#">x-acme-ibe-mobile-api</a>
+          <p class="navbar-text pull-right">
+              <a href="http://www.mulesoft.com" class="navbar-link">
+                <img src="./assets/images/mulesoft-logo-final.png" alt="MuleSoft" id="mulesoftlogo">
+              </a>
+          </p>
+          <div class="scroller scroller-left"><img src="./assets/icons/glyphicons_chevron-left.png" alt="scrollLeft"></div>
+          <div class="scroller scroller-right"><img src="./assets/icons/glyphicons_chevron-right.png" alt="scrollRight"></div>
+          <div class="wrapper">
+            <ul class="nav nav-tabs list" id="myTab">
+                                                                    <li><a href="./index.html">x-acme-ibe-mobile-api-test-suite</a></li>
+                                                                                                            <li><a href="./x-acme-ibe-mobile-api-impl-create-booking-test-suite.html">x-acme-ibe-mobile-api-impl-create-booking-test-suite</a></li>
+                                                                                                              <li><a href="./x-acme-ibe-mobile-api-munit-config-global.html">x-acme-ibe-mobile-api-munit-config-global</a></li>
+                                                                                                              <li><a href="./x-acme-ibe-mobile-api-error-handling-test-suite.html">x-acme-ibe-mobile-api-error-handling-test-suite</a></li>
+                                                                                                              <li><a href="./x-acme-ibe-mobile-api-impl-get-destinations-test-suite.html">x-acme-ibe-mobile-api-impl-get-destinations-test-suite</a></li>
+                                                                                                              <li><a href="./common-logger-dummy-flow.html">common-logger-dummy-flow</a></li>
+                                                                                                              <li><a href="./x-acme-ibe-mobile-api-get-flights-test-suite.html">x-acme-ibe-mobile-api-get-flights-test-suite</a></li>
+                                                                                                              <li><a href="./common-logger-dummy-flow-test.html">common-logger-dummy-flow-test</a></li>
+                                                                                                              <li><a href="./x-acme-ibe-mobile-api.html">x-acme-ibe-mobile-api</a></li>
+                                                                                                              <li><a href="./x-acme-ibe-mobile-api-contracts-test-suite.html">x-acme-ibe-mobile-api-contracts-test-suite</a></li>
+                                                                                                              <li><a href="./x-acme-ibe-mobile-api-munit-config-global.html">x-acme-ibe-mobile-api-munit-config-global</a></li>
+                                                                                                              <li class="active"><a href="./common-logging.xml.html">common-logging.xml</a></li>
+                                                                                                              <li><a href="./x-acme-ibe-mobile-api-impl-get-destinations.html">x-acme-ibe-mobile-api-impl-get-destinations</a></li>
+                                                                                                              <li><a href="./x-acme-ibe-mobile-api-config.html">x-acme-ibe-mobile-api-config</a></li>
+                                                                                                              <li><a href="./x-acme-ibe-mobile-api-impl-create-booking.html">x-acme-ibe-mobile-api-impl-create-booking</a></li>
+                                                                                                              <li><a href="./x-acme-ibe-mobile-api-get-flights.html">x-acme-ibe-mobile-api-get-flights</a></li>
+                                                                                                              <li><a href="./x-acme-ibe-mobile-api-contracts.html">x-acme-ibe-mobile-api-contracts</a></li>
+                                                                                                              <li><a href="./x-acme-ibe-mobile-api-error-handling.html">x-acme-ibe-mobile-api-error-handling</a></li>
+                                                                </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+  <header class="jumbotron subhead" id="overview">
+    <div class="container">
+      <h1>x-acme-ibe-mobile-api</h1>
+    </div>
+  </header>
+
+  <div class="container">
+
+    <!-- Docs nav
+    ================================================== -->
+    <div class="row">
+      <div class="span3 bs-docs-sidebar">
+        <ul class="nav nav-list bs-docs-sidenav affix">
+          <li class="nav-header">Flows</li>
+                      <li data-toggle="collapse" data-target="#_entry_logger_flowNav"><a href="#_entry_logger_flow"><i class="icon-chevron-right"></i> entry-logger-flow</a>
+            </li>
+            <div id="_entry_logger_flowNav" class="accordion-body collapse" style="height: 0px;">
+              <div class="accordion-inner">
+                <ul>
+                                                                                                                                                    </ul>
+              </div>
+            </div>
+                      <li data-toggle="collapse" data-target="#_exit_logger_flowNav"><a href="#_exit_logger_flow"><i class="icon-chevron-right"></i> exit-logger-flow</a>
+            </li>
+            <div id="_exit_logger_flowNav" class="accordion-body collapse" style="height: 0px;">
+              <div class="accordion-inner">
+                <ul>
+                                                                                                                                                    </ul>
+              </div>
+            </div>
+                      <li data-toggle="collapse" data-target="#_call_entry_logger_flowNav"><a href="#_call_entry_logger_flow"><i class="icon-chevron-right"></i> call-entry-logger-flow</a>
+            </li>
+            <div id="_call_entry_logger_flowNav" class="accordion-body collapse" style="height: 0px;">
+              <div class="accordion-inner">
+                <ul>
+                                                                                                                                                    </ul>
+              </div>
+            </div>
+                      <li data-toggle="collapse" data-target="#_call_exit_logger_flowNav"><a href="#_call_exit_logger_flow"><i class="icon-chevron-right"></i> call-exit-logger-flow</a>
+            </li>
+            <div id="_call_exit_logger_flowNav" class="accordion-body collapse" style="height: 0px;">
+              <div class="accordion-inner">
+                <ul>
+                                                                                                                                                    </ul>
+              </div>
+            </div>
+                      <li data-toggle="collapse" data-target="#_process_logger_flowNav"><a href="#_process_logger_flow"><i class="icon-chevron-right"></i> process-logger-flow</a>
+            </li>
+            <div id="_process_logger_flowNav" class="accordion-body collapse" style="height: 0px;">
+              <div class="accordion-inner">
+                <ul>
+                                                                                                                                                    </ul>
+              </div>
+            </div>
+                      <li data-toggle="collapse" data-target="#_warn_logger_flowNav"><a href="#_warn_logger_flow"><i class="icon-chevron-right"></i> warn-logger-flow</a>
+            </li>
+            <div id="_warn_logger_flowNav" class="accordion-body collapse" style="height: 0px;">
+              <div class="accordion-inner">
+                <ul>
+                                                                                                                                                    </ul>
+              </div>
+            </div>
+                      <li data-toggle="collapse" data-target="#_error_logger_flowNav"><a href="#_error_logger_flow"><i class="icon-chevron-right"></i> error-logger-flow</a>
+            </li>
+            <div id="_error_logger_flowNav" class="accordion-body collapse" style="height: 0px;">
+              <div class="accordion-inner">
+                <ul>
+                                                                                                                                                    </ul>
+              </div>
+            </div>
+                  </ul>
+      </div>
+      <div class="span9">
+
+        <!-- Elements and their descriptions
+        ================================================== -->
+        <div style="max-height: 640px;width:100%;overflow:auto;">
+                      <img src="img/common_logging_xml.png" usemap="#mFlowMap" alt="Mule Configuration Image">
+            <map name="mFlowMap">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  </map>
+                  </div>
+        <!--Mule configuration xml code-->
+        <div class="accordion-heading">
+          <a class="accordion-toggle" data-toggle="collapse" href="#collapseMuleConfiguration">
+            Show Mule Configuration XML code...
+          </a>
+        </div>
+        <div id="collapseMuleConfiguration" class="accordion-body collapse" style="height: 0px;">
+          <div class="accordion-inner">
+              <pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+
+&lt;mule xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd"&gt;
+    &lt;configuration-properties doc:name="common-logging-properties" doc:id="d15adda8-56eb-4d93-b4ee-608eec72e72a" file="properties/common-logging.properties"/&gt;  
+    &lt;flow name="entry-logger-flow" doc:id="b68f3f18-1223-4857-a97a-cf3f3761d392"&gt; 
+        &lt;set-variable value="#[if (isEmpty(p('common.log.entry.preprocess.flow.name'))) 'no-pre-process-flow' else p('common.log.entry.preprocess.flow.name')]" doc:name="Set Pre Process Flow Name Variable" doc:id="8b732768-0ba6-4e0c-8c41-91767c86bd93" variableName="preProcessFlowName"/&gt;  
+        &lt;parse-template doc:name="Parse Entry Logger Template" doc:id="5e15952e-9353-4459-aa68-104a6d73623e" location="${entry.logger.template.path}" target="vLoggerPayload" targetValue="#[payload]"/&gt;  
+        &lt;logger level="DEBUG" doc:name="entry log" doc:id="164e3777-345a-4549-896e-e6e26433e365" message="#[vars.vLoggerPayload]" category="common.log.flow.entry"/&gt; 
+    &lt;/flow&gt;  
+    &lt;flow name="exit-logger-flow" doc:id="5d09c49f-e5df-43f4-a5dc-34c79dc0ebcd"&gt; 
+        &lt;set-variable value="#[if (isEmpty(p('common.log.exit.preprocess.flow.name'))) 'no-pre-process-flow' else p('common.log.exit.preprocess.flow.name')]" doc:name="Set Pre Process Flow Name Variable" doc:id="a0f238ec-b98c-4a73-94b6-2ade1b66d924" variableName="preProcessFlowName"/&gt;  
+        &lt;parse-template doc:name="Parse Exit Logger Template" doc:id="594583a4-6a22-43a5-85c6-945dee11106e" location="${exit.logger.template.path}" target="vLoggerPayload" targetValue="#[payload]"/&gt;  
+        &lt;logger level="DEBUG" doc:name="exit log" doc:id="3f456ec6-6447-4ff4-853b-7ea9964ab1cd" message="#[vars.vLoggerPayload]" category="common.log.flow.exit"/&gt; 
+    &lt;/flow&gt;  
+    &lt;flow name="call-entry-logger-flow" doc:id="41acfc0e-af03-4db6-a041-2a3d61c74cc1"&gt; 
+        &lt;set-variable value="#[if (isEmpty(p('common.log.call.entry.preprocess.flow.name'))) 'no-pre-process-flow' else p('common.log.call.entry.preprocess.flow.name')]" doc:name="Set Pre Process Flow Name Variable" doc:id="b24d3083-6ca8-4d21-a029-ab17aa7ef273" variableName="preProcessFlowName"/&gt;  
+        &lt;parse-template doc:name="Parse Call Entry Logger Template" doc:id="f5e055a0-457f-4568-b76c-a0627780e73b" location="${call.entry.logger.template.path}" target="vLoggerPayload" targetValue="#[payload]"/&gt;  
+        &lt;logger level="INFO" doc:name="call-entry log" doc:id="aa637957-89c1-4a0c-81c8-547eda7955c1" message="#[vars.vLoggerPayload]" category="common.log.call.entry"/&gt; 
+    &lt;/flow&gt;  
+    &lt;flow name="call-exit-logger-flow" doc:id="10c8fa1c-4be6-44f4-baba-5551b49fb5eb"&gt; 
+        &lt;set-variable value="#[if (isEmpty(p('common.log.call.exit.preprocess.flow.name'))) 'no-pre-process-flow' else p('common.log.call.exit.preprocess.flow.name')]" doc:name="Set Pre Process Flow Name Variable" doc:id="62cd3be7-7b5b-450d-b037-7aa9088c8fe8" variableName="preProcessFlowName"/&gt;  
+        &lt;parse-template doc:name="Parse Call Exit Logger Template" doc:id="af2a2357-4e90-4b60-accb-45313aa2e490" location="${call.exit.logger.template.path}" target="vLoggerPayload" targetValue="#[payload]"/&gt;  
+        &lt;logger level="INFO" doc:name="call-exit log" doc:id="de49c1fd-4c86-442f-bfad-af9da7ae77b5" message="#[vars.vLoggerPayload]" category="common.log.call.exit"/&gt; 
+    &lt;/flow&gt;  
+    &lt;flow name="process-logger-flow" doc:id="d52fe5f5-98cd-47a9-9a0f-15d5c67e2b24"&gt; 
+        &lt;set-variable value="#[if (isEmpty(p('common.log.process.preprocess.flow.name'))) 'no-pre-process-flow' else p('common.log.process.preprocess.flow.name')]" doc:name="Set Pre Process Flow Name Variable" doc:id="0f594383-f626-476b-ad47-b088dda06684" variableName="preProcessFlowName"/&gt;  
+        &lt;parse-template doc:name="Parse Process Logger Template" doc:id="84d9efa5-3a04-485a-b11f-273b9f5845ba" location="${process.logger.template.path}" target="vLoggerPayload" targetValue="#[payload]"/&gt;  
+        &lt;logger level="INFO" doc:name="process log" doc:id="19c9180b-6c47-4b0d-b4fc-f25bd0b03442" message="#[vars.vLoggerPayload]" category="common.log.process"/&gt; 
+    &lt;/flow&gt;  
+    &lt;flow name="warn-logger-flow" doc:id="e3b02de3-ca7a-4230-a7a5-889d89259998"&gt; 
+        &lt;set-variable value="#[if (isEmpty(p('common.log.warn.preprocess.flow.name'))) 'no-pre-process-flow' else p('common.log.warn.preprocess.flow.name')]" doc:name="Set Pre Process Flow Name Variable" doc:id="95e8ef6f-85d1-4e31-af1e-ef733749f46b" variableName="preProcessFlowName"/&gt;  
+        &lt;parse-template doc:name="Parse Warn Logger Template" doc:id="24429d78-1c07-438f-b2ed-33919b511623" location="${warn.logger.template.path}" target="vLoggerPayload" targetValue="#[payload]"/&gt;  
+        &lt;logger level="WARN" doc:name="warn log" doc:id="f9b341c0-307d-41ea-bb77-b30cf9558dd3" message="#[vars.vLoggerPayload]" category="common.log"/&gt; 
+    &lt;/flow&gt;  
+    &lt;flow name="error-logger-flow" doc:id="abad0584-7792-48e9-9c70-c05d1f7ef0fa"&gt; 
+        &lt;set-variable value="#[if (isEmpty(p('common.log.error.preprocess.flow.name'))) 'no-pre-process-flow' else p('common.log.error.preprocess.flow.name')]" doc:name="Set Pre Process Flow Name Variable" doc:id="296223b1-6262-4e0f-b8aa-1473aa4ea116" variableName="preProcessFlowName"/&gt;  
+        &lt;parse-template doc:name="Parse Error Logger Template" doc:id="49d51948-1af2-42f1-af45-2cd5921be5ba" location="${error.logger.template.path}" target="vLoggerPayload" targetValue="#[payload]"/&gt;  
+        &lt;logger level="ERROR" doc:name="error log" doc:id="52e4c6c7-17b2-44d2-b99a-ad78edff3d6e" message="#[vars.vLoggerPayload]" category="common.log"/&gt; 
+    &lt;/flow&gt; 
+&lt;/mule&gt;
+</code></pre>
+
+          </div>
+        </div>
+
+                  <section id="_entry_logger_flow">
+            <div class="page-header">
+                <h1>entry-logger-flow <img src="./assets/icons/flow.png"></h1>
+            </div>
+            <div class="documentation-indented" style="height:100%;width:100%;overflow:auto;">
+                              <img src="img/entry_logger_flow.png" usemap="#flowMapentry_logger_flow" alt="entry_logger_flow image">
+                <map name="flowMapentry_logger_flow">
+                                                                                                                                                    </map>
+                          </div>
+            <div class="documentation-indented">
+              <div class="accordion-heading">
+                                <a class="accordion-toggle" data-toggle="collapse" href="#_entry_logger_flowxml_code">
+                  Show configuration XML code of the flow entry-logger-flow...
+                </a>
+              </div>
+              <div id="_entry_logger_flowxml_code" class="accordion-body collapse" style="height: 0px;">
+                <div class="accordion-inner">
+                    <pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+
+&lt;flow name="entry-logger-flow" doc:id="b68f3f18-1223-4857-a97a-cf3f3761d392"&gt;  
+    &lt;set-variable value="#[if (isEmpty(p('common.log.entry.preprocess.flow.name'))) 'no-pre-process-flow' else p('common.log.entry.preprocess.flow.name')]" doc:name="Set Pre Process Flow Name Variable" doc:id="8b732768-0ba6-4e0c-8c41-91767c86bd93" variableName="preProcessFlowName"/&gt;  
+    &lt;parse-template doc:name="Parse Entry Logger Template" doc:id="5e15952e-9353-4459-aa68-104a6d73623e" location="${entry.logger.template.path}" target="vLoggerPayload" targetValue="#[payload]"/&gt;  
+    &lt;logger level="DEBUG" doc:name="entry log" doc:id="164e3777-345a-4549-896e-e6e26433e365" message="#[vars.vLoggerPayload]" category="common.log.flow.entry"/&gt; 
+&lt;/flow&gt;
+</code></pre>
+
+                </div>
+              </div>
+              <p></p>
+            </div>
+                                                                                                    </section>
+                  <section id="_exit_logger_flow">
+            <div class="page-header">
+                <h1>exit-logger-flow <img src="./assets/icons/flow.png"></h1>
+            </div>
+            <div class="documentation-indented" style="height:100%;width:100%;overflow:auto;">
+                              <img src="img/exit_logger_flow.png" usemap="#flowMapexit_logger_flow" alt="exit_logger_flow image">
+                <map name="flowMapexit_logger_flow">
+                                                                                                                                                    </map>
+                          </div>
+            <div class="documentation-indented">
+              <div class="accordion-heading">
+                                <a class="accordion-toggle" data-toggle="collapse" href="#_exit_logger_flowxml_code">
+                  Show configuration XML code of the flow exit-logger-flow...
+                </a>
+              </div>
+              <div id="_exit_logger_flowxml_code" class="accordion-body collapse" style="height: 0px;">
+                <div class="accordion-inner">
+                    <pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+
+&lt;flow name="exit-logger-flow" doc:id="5d09c49f-e5df-43f4-a5dc-34c79dc0ebcd"&gt;  
+    &lt;set-variable value="#[if (isEmpty(p('common.log.exit.preprocess.flow.name'))) 'no-pre-process-flow' else p('common.log.exit.preprocess.flow.name')]" doc:name="Set Pre Process Flow Name Variable" doc:id="a0f238ec-b98c-4a73-94b6-2ade1b66d924" variableName="preProcessFlowName"/&gt;  
+    &lt;parse-template doc:name="Parse Exit Logger Template" doc:id="594583a4-6a22-43a5-85c6-945dee11106e" location="${exit.logger.template.path}" target="vLoggerPayload" targetValue="#[payload]"/&gt;  
+    &lt;logger level="DEBUG" doc:name="exit log" doc:id="3f456ec6-6447-4ff4-853b-7ea9964ab1cd" message="#[vars.vLoggerPayload]" category="common.log.flow.exit"/&gt; 
+&lt;/flow&gt;
+</code></pre>
+
+                </div>
+              </div>
+              <p></p>
+            </div>
+                                                                                                    </section>
+                  <section id="_call_entry_logger_flow">
+            <div class="page-header">
+                <h1>call-entry-logger-flow <img src="./assets/icons/flow.png"></h1>
+            </div>
+            <div class="documentation-indented" style="height:100%;width:100%;overflow:auto;">
+                              <img src="img/call_entry_logger_flow.png" usemap="#flowMapcall_entry_logger_flow" alt="call_entry_logger_flow image">
+                <map name="flowMapcall_entry_logger_flow">
+                                                                                                                                                    </map>
+                          </div>
+            <div class="documentation-indented">
+              <div class="accordion-heading">
+                                <a class="accordion-toggle" data-toggle="collapse" href="#_call_entry_logger_flowxml_code">
+                  Show configuration XML code of the flow call-entry-logger-flow...
+                </a>
+              </div>
+              <div id="_call_entry_logger_flowxml_code" class="accordion-body collapse" style="height: 0px;">
+                <div class="accordion-inner">
+                    <pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+
+&lt;flow name="call-entry-logger-flow" doc:id="41acfc0e-af03-4db6-a041-2a3d61c74cc1"&gt;  
+    &lt;set-variable value="#[if (isEmpty(p('common.log.call.entry.preprocess.flow.name'))) 'no-pre-process-flow' else p('common.log.call.entry.preprocess.flow.name')]" doc:name="Set Pre Process Flow Name Variable" doc:id="b24d3083-6ca8-4d21-a029-ab17aa7ef273" variableName="preProcessFlowName"/&gt;  
+    &lt;parse-template doc:name="Parse Call Entry Logger Template" doc:id="f5e055a0-457f-4568-b76c-a0627780e73b" location="${call.entry.logger.template.path}" target="vLoggerPayload" targetValue="#[payload]"/&gt;  
+    &lt;logger level="INFO" doc:name="call-entry log" doc:id="aa637957-89c1-4a0c-81c8-547eda7955c1" message="#[vars.vLoggerPayload]" category="common.log.call.entry"/&gt; 
+&lt;/flow&gt;
+</code></pre>
+
+                </div>
+              </div>
+              <p></p>
+            </div>
+                                                                                                    </section>
+                  <section id="_call_exit_logger_flow">
+            <div class="page-header">
+                <h1>call-exit-logger-flow <img src="./assets/icons/flow.png"></h1>
+            </div>
+            <div class="documentation-indented" style="height:100%;width:100%;overflow:auto;">
+                              <img src="img/call_exit_logger_flow.png" usemap="#flowMapcall_exit_logger_flow" alt="call_exit_logger_flow image">
+                <map name="flowMapcall_exit_logger_flow">
+                                                                                                                                                    </map>
+                          </div>
+            <div class="documentation-indented">
+              <div class="accordion-heading">
+                                <a class="accordion-toggle" data-toggle="collapse" href="#_call_exit_logger_flowxml_code">
+                  Show configuration XML code of the flow call-exit-logger-flow...
+                </a>
+              </div>
+              <div id="_call_exit_logger_flowxml_code" class="accordion-body collapse" style="height: 0px;">
+                <div class="accordion-inner">
+                    <pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+
+&lt;flow name="call-exit-logger-flow" doc:id="10c8fa1c-4be6-44f4-baba-5551b49fb5eb"&gt;  
+    &lt;set-variable value="#[if (isEmpty(p('common.log.call.exit.preprocess.flow.name'))) 'no-pre-process-flow' else p('common.log.call.exit.preprocess.flow.name')]" doc:name="Set Pre Process Flow Name Variable" doc:id="62cd3be7-7b5b-450d-b037-7aa9088c8fe8" variableName="preProcessFlowName"/&gt;  
+    &lt;parse-template doc:name="Parse Call Exit Logger Template" doc:id="af2a2357-4e90-4b60-accb-45313aa2e490" location="${call.exit.logger.template.path}" target="vLoggerPayload" targetValue="#[payload]"/&gt;  
+    &lt;logger level="INFO" doc:name="call-exit log" doc:id="de49c1fd-4c86-442f-bfad-af9da7ae77b5" message="#[vars.vLoggerPayload]" category="common.log.call.exit"/&gt; 
+&lt;/flow&gt;
+</code></pre>
+
+                </div>
+              </div>
+              <p></p>
+            </div>
+                                                                                                    </section>
+                  <section id="_process_logger_flow">
+            <div class="page-header">
+                <h1>process-logger-flow <img src="./assets/icons/flow.png"></h1>
+            </div>
+            <div class="documentation-indented" style="height:100%;width:100%;overflow:auto;">
+                              <img src="img/process_logger_flow.png" usemap="#flowMapprocess_logger_flow" alt="process_logger_flow image">
+                <map name="flowMapprocess_logger_flow">
+                                                                                                                                                    </map>
+                          </div>
+            <div class="documentation-indented">
+              <div class="accordion-heading">
+                                <a class="accordion-toggle" data-toggle="collapse" href="#_process_logger_flowxml_code">
+                  Show configuration XML code of the flow process-logger-flow...
+                </a>
+              </div>
+              <div id="_process_logger_flowxml_code" class="accordion-body collapse" style="height: 0px;">
+                <div class="accordion-inner">
+                    <pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+
+&lt;flow name="process-logger-flow" doc:id="d52fe5f5-98cd-47a9-9a0f-15d5c67e2b24"&gt;  
+    &lt;set-variable value="#[if (isEmpty(p('common.log.process.preprocess.flow.name'))) 'no-pre-process-flow' else p('common.log.process.preprocess.flow.name')]" doc:name="Set Pre Process Flow Name Variable" doc:id="0f594383-f626-476b-ad47-b088dda06684" variableName="preProcessFlowName"/&gt;  
+    &lt;parse-template doc:name="Parse Process Logger Template" doc:id="84d9efa5-3a04-485a-b11f-273b9f5845ba" location="${process.logger.template.path}" target="vLoggerPayload" targetValue="#[payload]"/&gt;  
+    &lt;logger level="INFO" doc:name="process log" doc:id="19c9180b-6c47-4b0d-b4fc-f25bd0b03442" message="#[vars.vLoggerPayload]" category="common.log.process"/&gt; 
+&lt;/flow&gt;
+</code></pre>
+
+                </div>
+              </div>
+              <p></p>
+            </div>
+                                                                                                    </section>
+                  <section id="_warn_logger_flow">
+            <div class="page-header">
+                <h1>warn-logger-flow <img src="./assets/icons/flow.png"></h1>
+            </div>
+            <div class="documentation-indented" style="height:100%;width:100%;overflow:auto;">
+                              <img src="img/warn_logger_flow.png" usemap="#flowMapwarn_logger_flow" alt="warn_logger_flow image">
+                <map name="flowMapwarn_logger_flow">
+                                                                                                                                                    </map>
+                          </div>
+            <div class="documentation-indented">
+              <div class="accordion-heading">
+                                <a class="accordion-toggle" data-toggle="collapse" href="#_warn_logger_flowxml_code">
+                  Show configuration XML code of the flow warn-logger-flow...
+                </a>
+              </div>
+              <div id="_warn_logger_flowxml_code" class="accordion-body collapse" style="height: 0px;">
+                <div class="accordion-inner">
+                    <pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+
+&lt;flow name="warn-logger-flow" doc:id="e3b02de3-ca7a-4230-a7a5-889d89259998"&gt;  
+    &lt;set-variable value="#[if (isEmpty(p('common.log.warn.preprocess.flow.name'))) 'no-pre-process-flow' else p('common.log.warn.preprocess.flow.name')]" doc:name="Set Pre Process Flow Name Variable" doc:id="95e8ef6f-85d1-4e31-af1e-ef733749f46b" variableName="preProcessFlowName"/&gt;  
+    &lt;parse-template doc:name="Parse Warn Logger Template" doc:id="24429d78-1c07-438f-b2ed-33919b511623" location="${warn.logger.template.path}" target="vLoggerPayload" targetValue="#[payload]"/&gt;  
+    &lt;logger level="WARN" doc:name="warn log" doc:id="f9b341c0-307d-41ea-bb77-b30cf9558dd3" message="#[vars.vLoggerPayload]" category="common.log"/&gt; 
+&lt;/flow&gt;
+</code></pre>
+
+                </div>
+              </div>
+              <p></p>
+            </div>
+                                                                                                    </section>
+                  <section id="_error_logger_flow">
+            <div class="page-header">
+                <h1>error-logger-flow <img src="./assets/icons/flow.png"></h1>
+            </div>
+            <div class="documentation-indented" style="height:100%;width:100%;overflow:auto;">
+                              <img src="img/error_logger_flow.png" usemap="#flowMaperror_logger_flow" alt="error_logger_flow image">
+                <map name="flowMaperror_logger_flow">
+                                                                                                                                                    </map>
+                          </div>
+            <div class="documentation-indented">
+              <div class="accordion-heading">
+                                <a class="accordion-toggle" data-toggle="collapse" href="#_error_logger_flowxml_code">
+                  Show configuration XML code of the flow error-logger-flow...
+                </a>
+              </div>
+              <div id="_error_logger_flowxml_code" class="accordion-body collapse" style="height: 0px;">
+                <div class="accordion-inner">
+                    <pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+
+&lt;flow name="error-logger-flow" doc:id="abad0584-7792-48e9-9c70-c05d1f7ef0fa"&gt;  
+    &lt;set-variable value="#[if (isEmpty(p('common.log.error.preprocess.flow.name'))) 'no-pre-process-flow' else p('common.log.error.preprocess.flow.name')]" doc:name="Set Pre Process Flow Name Variable" doc:id="296223b1-6262-4e0f-b8aa-1473aa4ea116" variableName="preProcessFlowName"/&gt;  
+    &lt;parse-template doc:name="Parse Error Logger Template" doc:id="49d51948-1af2-42f1-af45-2cd5921be5ba" location="${error.logger.template.path}" target="vLoggerPayload" targetValue="#[payload]"/&gt;  
+    &lt;logger level="ERROR" doc:name="error log" doc:id="52e4c6c7-17b2-44d2-b99a-ad78edff3d6e" message="#[vars.vLoggerPayload]" category="common.log"/&gt; 
+&lt;/flow&gt;
+</code></pre>
+
+                </div>
+              </div>
+              <p></p>
+            </div>
+                                                                                                    </section>
+              </div>
+    </div>
+  </div>
+
+<!-- Footer
+    ================================================== -->
+    <footer class="footer">
+      <div class="container">
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>Designed and built with <a href="http://www.mulesoft.com/mule-studio/" target="_blank">Anypoint Studio</a>.</p>
+        <p>Code licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a>. Documentation licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+        <p>Icons from <a href="http://glyphicons.com/">Glyphicons Free</a>, licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+        <ul class="footer-links">
+          <li><a href="http://blogs.mulesoft.org/">Read the blog</a></li>
+          <li><a href="http://www.mulesoft.org/jira/browse/">Submit issues</a></li>
+        </ul>
+      </div>
+    </footer>
+
+
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="assets/widgets.js"></script>
+    <script src="assets/jquery.js"></script>
+    <script src="assets/prettify.js"></script>
+    <script src="assets/bootstrap-transition.js"></script>
+    <script src="assets/bootstrap-alert.js"></script>
+    <script src="assets/bootstrap-modal.js"></script>
+    <script src="assets/bootstrap-dropdown.js"></script>
+    <script src="assets/bootstrap-scrollspy.js"></script>
+    <script src="assets/bootstrap-tab.js"></script>
+    <script src="assets/bootstrap-tooltip.js"></script>
+    <script src="assets/bootstrap-popover.js"></script>
+    <script src="assets/bootstrap-button.js"></script>
+    <script src="assets/bootstrap-collapse.js"></script>
+    <script src="assets/bootstrap-carousel.js"></script>
+    <script src="assets/bootstrap-typeahead.js"></script>
+    <script src="assets/bootstrap-affix.js"></script>
+    <script src="assets/scroller.js"></script>
+    <script src="assets/application.js"></script>
+
+</body>
+</html>
