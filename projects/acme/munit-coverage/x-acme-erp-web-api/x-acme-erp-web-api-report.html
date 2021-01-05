@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>MUnit Coverage Report</title>
+    <link rel="stylesheet" type="text/css" href="./assets/styles/mulesoft-styles.css">
+    <link rel="stylesheet" type="text/css" href="./assets/styles/tsorter.css">
+</head>
+<body>
+<div class="mulesoft-topbar">
+    <div class="mulesoft-appbar">
+        <div class="muleicon muleicon-logo"></div>
+        <div class="anypoint-brand">MUnit Coverage Report - x-acme-erp-web-api.xml</div>
+    </div>
+</div>
+
+<div class="col-md-2 col-md-offset-1 sidemenu">
+    <ul class="sidemenu-back">
+        <li><a href="./summary.html">Resources</a></li>
+    </ul>
+</div>
+
+<div class="col-md-8">
+    <h2 class="text-bold">Resource Coverage - #Processors 15 / 15</h2>
+    <div class="progress">
+        <span>100%</span>
+        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="100" aria-valuemin="0"
+             aria-valuemax="100" style="width: 100%;">
+        </div>
+    </div>
+    <ul class="list-unstyled">
+        <li><h4><b>Required Resource Coverage :</b>
+            N/A
+        </h4></li>
+        <li><h4><b>Required Container Coverage :</b>
+            N/A
+        </h4></li>
+    </ul>
+    <h2 class="text-bold">Containers</h2>
+    <table id="resources_table" class="table table-featured table-hover sortable">
+        <thead>
+        <tr>
+            <th colspan="2">Name</th>
+            <th>Type</th>
+            <th data-tsorter="numeric">#Covered Processors</th>
+            <th data-tsorter="numeric">#Processors</th>
+            <th data-tsorter="coverage">Coverage*</th>
+        </tr>
+        </thead>
+        <tbody id="table-body">
+        <tr>
+            <td colspan="2">x-acme-erp-web-api-console</td>
+            <td>Flow</td>
+            <td>6</td>
+            <td>6</td>
+            <td>
+                <div class="progress">
+                    <span>100%</span>
+                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="100"
+                         aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
+                    </div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">x-acme-erp-web-api-main</td>
+            <td>Flow</td>
+            <td>9</td>
+            <td>9</td>
+            <td>
+                <div class="progress">
+                    <span>100%</span>
+                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="100"
+                         aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
+                    </div>
+                </div>
+            </td>
+        </tr>
+
+        <table>
+            <tbody>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        1
+                    </td>
+                    <td>
+
+                            &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        2
+                    </td>
+                    <td>
+
+                            &lt;mule xmlns:doc=&quot;http://www.mulesoft.org/schema/mule/documentation&quot; xmlns=&quot;http://www.mulesoft.org/schema/mule/core&quot; xmlns:apikit=&quot;http://www.mulesoft.org/schema/mule/mule-apikit&quot; xmlns:http=&quot;http://www.mulesoft.org/schema/mule/http&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:schemaLocation=&quot;http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd http://www.mulesoft.org/schema/mule/mule-apikit http://www.mulesoft.org/schema/mule/mule-apikit/current/mule-apikit.xsd &quot;&gt;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        3
+                    </td>
+                    <td>
+
+                                &lt;flow name=&quot;x-acme-erp-web-api-main&quot; doc:description=&quot;The API main flow&quot;&gt;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        4
+                    </td>
+                    <td>
+
+                                    &lt;http:listener path=&quot;/api/*&quot; config-ref=&quot;x-acme-erp-web-api-httpListenerConfig&quot;&gt;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        5
+                    </td>
+                    <td>
+
+                                        &lt;http:response statusCode=&quot;#[vars.httpStatus default 200]&quot;&gt;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        6
+                    </td>
+                    <td>
+
+                                            &lt;http:headers&gt;&lt;![CDATA[#[vars.outboundHeaders default {}]]]&gt;&lt;/http:headers&gt;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        7
+                    </td>
+                    <td>
+
+                                        &lt;/http:response&gt;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        8
+                    </td>
+                    <td>
+
+                                        &lt;http:error-response statusCode=&quot;#[vars.httpStatus default 500]&quot;&gt;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        9
+                    </td>
+                    <td>
+
+                                            &lt;http:body&gt;&lt;![CDATA[#[payload]]]&gt;&lt;/http:body&gt;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        10
+                    </td>
+                    <td>
+
+                                            &lt;http:headers&gt;&lt;![CDATA[#[vars.outboundHeaders default {}]]]&gt;&lt;/http:headers&gt;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        11
+                    </td>
+                    <td>
+
+                                        &lt;/http:error-response&gt;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        12
+                    </td>
+                    <td>
+
+                                    &lt;/http:listener&gt;
+                    </td>
+                </tr>
+                    <tr class="covered">
+
+                    <td class="code-line">
+                        13
+                    </td>
+                    <td>
+
+                                    &lt;set-variable value=&quot;x-acme-erp-web-api-main&quot; doc:name=&quot;Set vFlowName&quot; doc:id=&quot;bc57d21d-9f3d-40c8-9dcf-99735fbe28ea&quot; variableName=&quot;vFlowName&quot;/&gt;
+                    </td>
+                </tr>
+                    <tr class="covered">
+
+                    <td class="code-line">
+                        14
+                    </td>
+                    <td style="text-indent:20px">
+
+                            		&lt;flow-ref doc:name=&quot;entry-logger-flow&quot; doc:id=&quot;e0debfd1-c6de-4bb6-bd50-6af3f20fb602&quot; name=&quot;entry-logger-flow&quot;/&gt;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        15
+                    </td>
+                    <td style="text-indent:20px">
+
+                            		&lt;choice doc:name=&quot;Choice&quot; doc:id=&quot;8966629f-05dc-49e9-89ec-0d025ca588c2&quot; doc:description=&quot;The temporary hardcoded authentication until API Manager is in place&quot;&gt;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        16
+                    </td>
+                    <td style="text-indent:30px">
+
+                            			&lt;when expression=&quot;#[attributes.headers.client_id == p(&#39;x-acme-erp-web-api.app.security.client_id&#39;) and attributes.headers.client_secret == p(&#39;x-acme-erp-web-api.app.security.client_secret&#39;)]&quot;&gt;
+                    </td>
+                </tr>
+                    <tr class="covered">
+
+                    <td class="code-line">
+                        17
+                    </td>
+                    <td style="text-indent:40px">
+
+                            				&lt;logger level=&quot;INFO&quot; doc:name=&quot;Log success&quot; doc:id=&quot;e0014973-7b6c-4253-8ed1-67264f85a46d&quot; message=&quot;Authentication successful&quot;/&gt;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        18
+                    </td>
+                    <td style="text-indent:30px">
+
+                            			&lt;/when&gt;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        19
+                    </td>
+                    <td style="text-indent:30px">
+
+                            			&lt;otherwise &gt;
+                    </td>
+                </tr>
+                    <tr class="covered">
+
+                    <td class="code-line">
+                        20
+                    </td>
+                    <td style="text-indent:40px">
+
+                            				&lt;logger level=&quot;INFO&quot; doc:name=&quot;Log failure&quot; doc:id=&quot;4e96e601-0163-450b-ac73-f9fb113c5b3d&quot; message=&quot;The client_id (#[attributes.headers.client_id]) and client_secret (#[attributes.headers.client_secret]) not valid  ::  #[p(&#39;x-acme-ibe-mobile-api.app.security.client_id&#39;)] : #[p(&#39;x-acme-ibe-mobile-api.app.security.client_secret&#39;)]&quot;/&gt;
+                    </td>
+                </tr>
+                    <tr class="covered">
+
+                    <td class="code-line">
+                        21
+                    </td>
+                    <td style="text-indent:40px">
+
+                            				&lt;raise-error doc:name=&quot;Raise error&quot; doc:id=&quot;4632f6f5-4aea-46d0-bcf2-4a80a95d1686&quot; type=&quot;ACME:UNAUTHORIZED&quot; description=&quot;Authentication failed&quot;/&gt;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        22
+                    </td>
+                    <td style="text-indent:30px">
+
+                            			&lt;/otherwise&gt;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        23
+                    </td>
+                    <td style="text-indent:20px">
+
+                            		&lt;/choice&gt;
+                    </td>
+                </tr>
+                    <tr class="covered">
+
+                    <td class="code-line">
+                        24
+                    </td>
+                    <td style="text-indent:20px">
+
+                            		&lt;apikit:router config-ref=&quot;x-acme-erp-web-api-config&quot; doc:description=&quot;API Kit router. The RAML for this APIKIT router is available at https://anypoint.mulesoft.com/exchange/8729b477-e4bd-4b6e-8027-db979e776533/p-acme-erp-api/&quot;/&gt;
+                    </td>
+                </tr>
+                    <tr class="covered">
+
+                    <td class="code-line">
+                        25
+                    </td>
+                    <td>
+
+                                    &lt;set-variable value=&quot;x-acme-erp-web-api-main&quot; doc:name=&quot;Set vFlowName&quot; doc:id=&quot;31b93d2d-b0d7-4dba-b266-9bb14799b4bd&quot; variableName=&quot;vFlowName&quot;/&gt;
+                    </td>
+                </tr>
+                    <tr class="covered">
+
+                    <td class="code-line">
+                        26
+                    </td>
+                    <td style="text-indent:20px">
+
+                            		&lt;flow-ref doc:name=&quot;exit-logger-flow&quot; doc:id=&quot;3979d401-7702-4647-94a5-866eeae90315&quot; name=&quot;exit-logger-flow&quot;/&gt;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        27
+                    </td>
+                    <td style="text-indent:20px">
+
+                            		&lt;error-handler&gt;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        28
+                    </td>
+                    <td>
+
+                                        &lt;on-error-propagate type=&quot;ANY&quot; enableNotifications=&quot;true&quot; logException=&quot;true&quot;&gt;
+                    </td>
+                </tr>
+                    <tr class="covered">
+
+                    <td class="code-line">
+                        29
+                    </td>
+                    <td style="text-indent:40px">
+
+                            				&lt;flow-ref doc:name=&quot;x-acme-erp-web-api-error-handler-flow&quot; doc:id=&quot;3e2c38e6-9a15-4b7c-a749-c8765644ddfd&quot; name=&quot;x-acme-erp-web-api-error-handler-flow&quot;/&gt;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        30
+                    </td>
+                    <td>
+
+                                        &lt;/on-error-propagate&gt;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        31
+                    </td>
+                    <td>
+
+                                    &lt;/error-handler&gt;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        32
+                    </td>
+                    <td>
+
+                                &lt;/flow&gt;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        33
+                    </td>
+                    <td>
+
+                                &lt;flow name=&quot;x-acme-erp-web-api-console&quot;&gt;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        34
+                    </td>
+                    <td>
+
+                                    &lt;http:listener path=&quot;/console/*&quot; config-ref=&quot;x-acme-erp-web-api-httpListenerConfig&quot;&gt;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        35
+                    </td>
+                    <td>
+
+                                        &lt;http:response statusCode=&quot;#[vars.httpStatus default 200]&quot;&gt;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        36
+                    </td>
+                    <td>
+
+                                            &lt;http:headers&gt;&lt;![CDATA[#[vars.outboundHeaders default {}]]]&gt;&lt;/http:headers&gt;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        37
+                    </td>
+                    <td>
+
+                                        &lt;/http:response&gt;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        38
+                    </td>
+                    <td>
+
+                                        &lt;http:error-response statusCode=&quot;#[vars.httpStatus default 500]&quot;&gt;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        39
+                    </td>
+                    <td>
+
+                                            &lt;http:body&gt;&lt;![CDATA[#[payload]]]&gt;&lt;/http:body&gt;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        40
+                    </td>
+                    <td>
+
+                                            &lt;http:headers&gt;&lt;![CDATA[#[vars.outboundHeaders default {}]]]&gt;&lt;/http:headers&gt;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        41
+                    </td>
+                    <td>
+
+                                        &lt;/http:error-response&gt;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        42
+                    </td>
+                    <td>
+
+                                    &lt;/http:listener&gt;
+                    </td>
+                </tr>
+                    <tr class="covered">
+
+                    <td class="code-line">
+                        43
+                    </td>
+                    <td>
+
+                                    &lt;set-variable value=&quot;x-acme-erp-web-api-console&quot; doc:name=&quot;Set vFlowName&quot; doc:id=&quot;5f634bf2-93e9-45c9-8be8-67c5d3ea4367&quot; variableName=&quot;vFlowName&quot;/&gt;
+                    </td>
+                </tr>
+                    <tr class="covered">
+
+                    <td class="code-line">
+                        44
+                    </td>
+                    <td style="text-indent:20px">
+
+                            		&lt;flow-ref doc:name=&quot;entry-logger-flow&quot; doc:id=&quot;90090eaa-7e48-4764-b875-0d8ec497f168&quot; name=&quot;entry-logger-flow&quot;/&gt;
+                    </td>
+                </tr>
+                    <tr class="covered">
+
+                    <td class="code-line">
+                        45
+                    </td>
+                    <td style="text-indent:20px">
+
+                            		&lt;apikit:console config-ref=&quot;x-acme-erp-web-api-config&quot;/&gt;
+                    </td>
+                </tr>
+                    <tr class="covered">
+
+                    <td class="code-line">
+                        46
+                    </td>
+                    <td>
+
+                                    &lt;set-variable value=&quot;x-acme-erp-web-api-console&quot; doc:name=&quot;Set vFlowName&quot; doc:id=&quot;db8d6c69-6673-41e9-9650-e4fe2551e3ce&quot; variableName=&quot;vFlowName&quot;/&gt;
+                    </td>
+                </tr>
+                    <tr class="covered">
+
+                    <td class="code-line">
+                        47
+                    </td>
+                    <td style="text-indent:20px">
+
+                            		&lt;flow-ref doc:name=&quot;exit-logger-flow&quot; doc:id=&quot;29ecd93c-11ec-4cbc-9f9e-fe82aaf6c0c7&quot; name=&quot;exit-logger-flow&quot;/&gt;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        48
+                    </td>
+                    <td style="text-indent:20px">
+
+                            		&lt;error-handler&gt;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        49
+                    </td>
+                    <td>
+
+                                        &lt;on-error-propagate type=&quot;APIKIT:NOT_FOUND&quot;&gt;
+                    </td>
+                </tr>
+                    <tr class="covered">
+
+                    <td class="code-line">
+                        50
+                    </td>
+                    <td>
+
+                                            &lt;ee:transform xmlns:ee=&quot;http://www.mulesoft.org/schema/mule/ee/core&quot; xsi:schemaLocation=&quot;http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd&quot; doc:name=&quot;Create Error Response&quot;&gt;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        51
+                    </td>
+                    <td>
+
+                                                &lt;ee:message&gt;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        52
+                    </td>
+                    <td>
+
+                                                    &lt;ee:set-payload&gt;&lt;![CDATA[%dw 2.0
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        53
+                    </td>
+                    <td>
+
+                            output application/json
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        54
+                    </td>
+                    <td>
+
+                            ---
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        55
+                    </td>
+                    <td>
+
+                            {message: &quot;Resource not found&quot;}]]&gt;&lt;/ee:set-payload&gt;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        56
+                    </td>
+                    <td>
+
+                                                &lt;/ee:message&gt;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        57
+                    </td>
+                    <td>
+
+                                                &lt;ee:variables&gt;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        58
+                    </td>
+                    <td>
+
+                                                    &lt;ee:set-variable variableName=&quot;httpStatus&quot;&gt;404&lt;/ee:set-variable&gt;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        59
+                    </td>
+                    <td>
+
+                                                &lt;/ee:variables&gt;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        60
+                    </td>
+                    <td>
+
+                                            &lt;/ee:transform&gt;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        61
+                    </td>
+                    <td>
+
+                                        &lt;/on-error-propagate&gt;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        62
+                    </td>
+                    <td>
+
+                                    &lt;/error-handler&gt;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        63
+                    </td>
+                    <td>
+
+                                &lt;/flow&gt;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        64
+                    </td>
+                    <td>
+
+                            &lt;/mule&gt;
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        </tbody>
+    </table>
+    <h4>(*) Number of processors executed during test</h4>
+</div>
+<script type="text/javascript" src="./assets/js/tsorter.min.js"></script>
+<script type="text/javascript">
+    function init() {
+        var sorter = tsorter.create('resources_table', 0, {
+            coverage: function (row) {
+                var cov = this.getCell(row).childNodes[1].childNodes[3].attributes['aria-valuenow'].textContent;
+                return parseFloat(cov.substring(cov[0].length - 1), 10);
+            }
+        });
+    }
+
+    window.onload = init;
+
+</script>
+</body>
+</html>
