@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>MUnit Coverage Report</title>
+    <link rel="stylesheet" type="text/css" href="./assets/styles/mulesoft-styles.css">
+    <link rel="stylesheet" type="text/css" href="./assets/styles/tsorter.css">
+</head>
+<body>
+<div class="mulesoft-topbar">
+    <div class="mulesoft-appbar">
+        <div class="muleicon muleicon-logo"></div>
+        <div class="anypoint-brand">MUnit Coverage Report - x-acme-ibe-mobile-api-get-flights.xml</div>
+    </div>
+</div>
+
+<div class="col-md-2 col-md-offset-1 sidemenu">
+    <ul class="sidemenu-back">
+        <li><a href="./summary.html">Resources</a></li>
+    </ul>
+</div>
+
+<div class="col-md-8">
+    <h2 class="text-bold">Resource Coverage - #Processors 8 / 8</h2>
+    <div class="progress">
+        <span>100%</span>
+        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="100" aria-valuemin="0"
+             aria-valuemax="100" style="width: 100%;">
+        </div>
+    </div>
+    <ul class="list-unstyled">
+        <li><h4><b>Required Resource Coverage :</b>
+            N/A
+        </h4></li>
+        <li><h4><b>Required Container Coverage :</b>
+            N/A
+        </h4></li>
+    </ul>
+    <h2 class="text-bold">Containers</h2>
+    <table id="resources_table" class="table table-featured table-hover sortable">
+        <thead>
+        <tr>
+            <th colspan="2">Name</th>
+            <th>Type</th>
+            <th data-tsorter="numeric">#Covered Processors</th>
+            <th data-tsorter="numeric">#Processors</th>
+            <th data-tsorter="coverage">Coverage*</th>
+        </tr>
+        </thead>
+        <tbody id="table-body">
+        <tr>
+            <td colspan="2">x-acme-ibe-mobile-api-impl-get-flights-flow</td>
+            <td>Scope</td>
+            <td>8</td>
+            <td>8</td>
+            <td>
+                <div class="progress">
+                    <span>100%</span>
+                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="100"
+                         aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
+                    </div>
+                </div>
+            </td>
+        </tr>
+
+        <table>
+            <tbody>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        1
+                    </td>
+                    <td>
+
+                            &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        2
+                    </td>
+                    <td>
+
+                            
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        3
+                    </td>
+                    <td>
+
+                            &lt;mule xmlns:http=&quot;http://www.mulesoft.org/schema/mule/http&quot;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        4
+                    </td>
+                    <td style="text-indent:10px">
+
+                            	xmlns:ee=&quot;http://www.mulesoft.org/schema/mule/ee/core&quot;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        5
+                    </td>
+                    <td style="text-indent:10px">
+
+                            	xmlns=&quot;http://www.mulesoft.org/schema/mule/core&quot; xmlns:doc=&quot;http://www.mulesoft.org/schema/mule/documentation&quot;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        6
+                    </td>
+                    <td style="text-indent:10px">
+
+                            	xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        7
+                    </td>
+                    <td style="text-indent:10px">
+
+                            	xsi:schemaLocation=&quot;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        8
+                    </td>
+                    <td>
+
+                            http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd 
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        9
+                    </td>
+                    <td>
+
+                            http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd&quot;&gt;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        10
+                    </td>
+                    <td style="text-indent:10px">
+
+                            	&lt;sub-flow name=&quot;x-acme-ibe-mobile-api-impl-get-flights-flow&quot; doc:id=&quot;5725e2dc-8a76-478c-aa06-51249e17b0fd&quot;&gt;
+                    </td>
+                </tr>
+                    <tr class="covered">
+
+                    <td class="code-line">
+                        11
+                    </td>
+                    <td style="text-indent:20px">
+
+                            		&lt;set-variable value=&quot;x-acme-ibe-mobile-api-impl-get-flights-flow&quot; doc:name=&quot;Set vFlowName&quot; doc:id=&quot;edb3c329-8dc4-4553-85ff-2f1982762724&quot; variableName=&quot;vFlowName&quot;/&gt;
+                    </td>
+                </tr>
+                    <tr class="covered">
+
+                    <td class="code-line">
+                        12
+                    </td>
+                    <td style="text-indent:20px">
+
+                            		&lt;flow-ref doc:name=&quot;entry-logger-flow&quot; doc:id=&quot;3f069411-920f-4f69-be0e-b6ec2582690a&quot; name=&quot;entry-logger-flow&quot;/&gt;
+                    </td>
+                </tr>
+                    <tr class="covered">
+
+                    <td class="code-line">
+                        13
+                    </td>
+                    <td style="text-indent:20px">
+
+                            		&lt;ee:transform doc:name=&quot;Set vClientCredentials and vQueryParameters&quot; doc:id=&quot;d08361fd-60ce-4bf4-a3aa-43a21299190a&quot; &gt;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        14
+                    </td>
+                    <td style="text-indent:30px">
+
+                            			&lt;ee:message &gt;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        15
+                    </td>
+                    <td style="text-indent:30px">
+
+                            			&lt;/ee:message&gt;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        16
+                    </td>
+                    <td style="text-indent:30px">
+
+                            			&lt;ee:variables &gt;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        17
+                    </td>
+                    <td style="text-indent:40px">
+
+                            				&lt;ee:set-variable variableName=&quot;vClientCredentials&quot; &gt;&lt;![CDATA[%dw 2.0
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        18
+                    </td>
+                    <td>
+
+                            output application/java
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        19
+                    </td>
+                    <td>
+
+                            ---
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        20
+                    </td>
+                    <td>
+
+                            {
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        21
+                    </td>
+                    <td style="text-indent:10px">
+
+                            	client_id: p(&quot;secure::x-acme-ibe-mobile-api.app.papi.p-acme-ibe.credentials.client_id&quot;),
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        22
+                    </td>
+                    <td style="text-indent:10px">
+
+                            	client_secret: p(&quot;secure::x-acme-ibe-mobile-api.app.papi.p-acme-ibe.credentials.client_secret&quot;)
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        23
+                    </td>
+                    <td>
+
+                            }]]&gt;&lt;/ee:set-variable&gt;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        24
+                    </td>
+                    <td style="text-indent:40px">
+
+                            				&lt;ee:set-variable variableName=&quot;vQueryParameters&quot; &gt;&lt;![CDATA[%dw 2.0
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        25
+                    </td>
+                    <td>
+
+                            output application/java
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        26
+                    </td>
+                    <td>
+
+                            var startDate = (attributes.queryParams.startDate default &quot;&quot;) as String
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        27
+                    </td>
+                    <td>
+
+                            ---
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        28
+                    </td>
+                    <td>
+
+                            {
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        29
+                    </td>
+                    <td style="text-indent:10px">
+
+                            	(startDate: startDate) if (!isEmpty(startDate))
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        30
+                    </td>
+                    <td>
+
+                            }]]&gt;&lt;/ee:set-variable&gt;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        31
+                    </td>
+                    <td style="text-indent:30px">
+
+                            			&lt;/ee:variables&gt;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        32
+                    </td>
+                    <td style="text-indent:20px">
+
+                            		&lt;/ee:transform&gt;
+                    </td>
+                </tr>
+                    <tr class="covered">
+
+                    <td class="code-line">
+                        33
+                    </td>
+                    <td style="text-indent:20px">
+
+                            		&lt;logger level=&quot;INFO&quot; doc:name=&quot;Logger&quot; doc:id=&quot;f61bd440-f44f-4e3f-8ca4-28bdab0845db&quot; message=&quot;The DEBUG** : #[vars.vQueryParameters] ,  Attributes: #[attributes], Vars: #[vars]&quot;/&gt;
+                    </td>
+                </tr>
+                    <tr class="covered">
+
+                    <td class="code-line">
+                        34
+                    </td>
+                    <td style="text-indent:20px">
+
+                            		&lt;flow-ref doc:name=&quot;call-entry-logger-flow&quot; doc:id=&quot;703e13a2-a6f0-4491-a778-9c48d5383859&quot; name=&quot;call-entry-logger-flow&quot; /&gt;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        35
+                    </td>
+                    <td style="text-indent:20px">
+
+                            		&lt;until-successful maxRetries=&quot;${x-acme-ibe-mobile-api.app.papi.p-acme-ibe.retryCount}&quot; doc:name=&quot;Until Successful&quot; doc:id=&quot;90419a6f-f24c-4edb-918a-0e22d0eb1c2b&quot; millisBetweenRetries=&quot;${x-acme-ibe-mobile-api.app.papi.p-acme-ibe.retryInterval}&quot;&gt;
+                    </td>
+                </tr>
+                    <tr class="covered">
+
+                    <td class="code-line">
+                        36
+                    </td>
+                    <td style="text-indent:30px">
+
+                            			&lt;http:request method=&quot;GET&quot; doc:name=&quot;API-Call:process-api:getFlights&quot; doc:id=&quot;787c7e01-7208-462c-848e-b9dbdce3ba63&quot; config-ref=&quot;HTTP_Request_configuration_ibe&quot; path=&quot;${x-acme-ibe-mobile-api.app.papi.p-acme-ibe.endpoints.getFlights}&quot;&gt;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        37
+                    </td>
+                    <td style="text-indent:30px">
+
+                            			&lt;http:headers&gt;&lt;![CDATA[#[vars.vClientCredentials]]]&gt;&lt;/http:headers&gt;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        38
+                    </td>
+                    <td style="text-indent:30px">
+
+                            			&lt;http:query-params&gt;&lt;![CDATA[#[vars.vQueryParameters]]]&gt;&lt;/http:query-params&gt;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        39
+                    </td>
+                    <td style="text-indent:20px">
+
+                            		&lt;/http:request&gt;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        40
+                    </td>
+                    <td style="text-indent:20px">
+
+                            		&lt;/until-successful&gt;
+                    </td>
+                </tr>
+                    <tr class="covered">
+
+                    <td class="code-line">
+                        41
+                    </td>
+                    <td style="text-indent:20px">
+
+                            		&lt;flow-ref doc:name=&quot;call-exit-logger-flow&quot; doc:id=&quot;f9e3c293-ee5f-49e2-b2f6-29c79a541c74&quot; name=&quot;call-exit-logger-flow&quot;/&gt;
+                    </td>
+                </tr>
+                    <tr class="covered">
+
+                    <td class="code-line">
+                        42
+                    </td>
+                    <td style="text-indent:20px">
+
+                            		&lt;flow-ref doc:name=&quot;exit-logger-flow&quot; doc:id=&quot;2b7a83ab-ae44-42f6-866d-91b94bbfdfbe&quot; name=&quot;exit-logger-flow&quot;/&gt;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        43
+                    </td>
+                    <td style="text-indent:10px">
+
+                            	
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        44
+                    </td>
+                    <td>
+
+                            &lt;/sub-flow&gt;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        45
+                    </td>
+                    <td>
+
+                            &lt;/mule&gt;
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        </tbody>
+    </table>
+    <h4>(*) Number of processors executed during test</h4>
+</div>
+<script type="text/javascript" src="./assets/js/tsorter.min.js"></script>
+<script type="text/javascript">
+    function init() {
+        var sorter = tsorter.create('resources_table', 0, {
+            coverage: function (row) {
+                var cov = this.getCell(row).childNodes[1].childNodes[3].attributes['aria-valuenow'].textContent;
+                return parseFloat(cov.substring(cov[0].length - 1), 10);
+            }
+        });
+    }
+
+    window.onload = init;
+
+</script>
+</body>
+</html>

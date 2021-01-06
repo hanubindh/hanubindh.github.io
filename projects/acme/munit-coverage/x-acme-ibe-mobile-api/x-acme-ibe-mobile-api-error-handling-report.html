@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>MUnit Coverage Report</title>
+    <link rel="stylesheet" type="text/css" href="./assets/styles/mulesoft-styles.css">
+    <link rel="stylesheet" type="text/css" href="./assets/styles/tsorter.css">
+</head>
+<body>
+<div class="mulesoft-topbar">
+    <div class="mulesoft-appbar">
+        <div class="muleicon muleicon-logo"></div>
+        <div class="anypoint-brand">MUnit Coverage Report - x-acme-ibe-mobile-api-error-handling.xml</div>
+    </div>
+</div>
+
+<div class="col-md-2 col-md-offset-1 sidemenu">
+    <ul class="sidemenu-back">
+        <li><a href="./summary.html">Resources</a></li>
+    </ul>
+</div>
+
+<div class="col-md-8">
+    <h2 class="text-bold">Resource Coverage - #Processors 10 / 10</h2>
+    <div class="progress">
+        <span>100%</span>
+        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="100" aria-valuemin="0"
+             aria-valuemax="100" style="width: 100%;">
+        </div>
+    </div>
+    <ul class="list-unstyled">
+        <li><h4><b>Required Resource Coverage :</b>
+            N/A
+        </h4></li>
+        <li><h4><b>Required Container Coverage :</b>
+            N/A
+        </h4></li>
+    </ul>
+    <h2 class="text-bold">Containers</h2>
+    <table id="resources_table" class="table table-featured table-hover sortable">
+        <thead>
+        <tr>
+            <th colspan="2">Name</th>
+            <th>Type</th>
+            <th data-tsorter="numeric">#Covered Processors</th>
+            <th data-tsorter="numeric">#Processors</th>
+            <th data-tsorter="coverage">Coverage*</th>
+        </tr>
+        </thead>
+        <tbody id="table-body">
+        <tr>
+            <td colspan="2">x-acme-ibe-mobile-api-error-handler-flow</td>
+            <td>Flow</td>
+            <td>10</td>
+            <td>10</td>
+            <td>
+                <div class="progress">
+                    <span>100%</span>
+                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="100"
+                         aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
+                    </div>
+                </div>
+            </td>
+        </tr>
+
+        <table>
+            <tbody>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        1
+                    </td>
+                    <td>
+
+                            &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        2
+                    </td>
+                    <td>
+
+                            
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        3
+                    </td>
+                    <td>
+
+                            &lt;mule xmlns:ee=&quot;http://www.mulesoft.org/schema/mule/ee/core&quot;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        4
+                    </td>
+                    <td style="text-indent:10px">
+
+                            	xmlns=&quot;http://www.mulesoft.org/schema/mule/core&quot;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        5
+                    </td>
+                    <td style="text-indent:10px">
+
+                            	xmlns:doc=&quot;http://www.mulesoft.org/schema/mule/documentation&quot;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        6
+                    </td>
+                    <td style="text-indent:10px">
+
+                            	xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        7
+                    </td>
+                    <td style="text-indent:10px">
+
+                            	xsi:schemaLocation=&quot;http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        8
+                    </td>
+                    <td>
+
+                            http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd&quot;&gt;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        9
+                    </td>
+                    <td style="text-indent:10px">
+
+                            	&lt;!-- This Sub flow for common error handling like all APIKIT and HTTP exceptions --&gt;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        10
+                    </td>
+                    <td style="text-indent:10px">
+
+                            	&lt;flow name=&quot;x-acme-ibe-mobile-api-error-handler-flow&quot;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        11
+                    </td>
+                    <td style="text-indent:20px">
+
+                            		doc:id=&quot;584d690f-88cb-4fc2-b9b5-9d2df21e1df7&quot;&gt;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        12
+                    </td>
+                    <td style="text-indent:20px">
+
+                            		&lt;set-variable value=&quot;x-fvm-10duke-api-error-handler-flow&quot;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        13
+                    </td>
+                    <td style="text-indent:30px">
+
+                            			doc:name=&quot;Set Flow Name&quot;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        14
+                    </td>
+                    <td style="text-indent:30px">
+
+                            			doc:id=&quot;8d274d73-4cc6-41da-8a6d-57589d49b3fe&quot;
+                    </td>
+                </tr>
+                    <tr class="covered">
+
+                    <td class="code-line">
+                        15
+                    </td>
+                    <td style="text-indent:30px">
+
+                            			variableName=&quot;vFlowName&quot; /&gt;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        16
+                    </td>
+                    <td style="text-indent:20px">
+
+                            		&lt;flow-ref doc:name=&quot;entry-logger-flow&quot;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        17
+                    </td>
+                    <td style="text-indent:30px">
+
+                            			doc:id=&quot;ec030546-6497-4235-8622-ec4d6f621117&quot;
+                    </td>
+                </tr>
+                    <tr class="covered">
+
+                    <td class="code-line">
+                        18
+                    </td>
+                    <td style="text-indent:30px">
+
+                            			name=&quot;entry-logger-flow&quot; /&gt;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        19
+                    </td>
+                    <td style="text-indent:20px">
+
+                            		&lt;ee:transform doc:name=&quot;Set HTTP Status Code&quot;
+                    </td>
+                </tr>
+                    <tr class="covered">
+
+                    <td class="code-line">
+                        20
+                    </td>
+                    <td style="text-indent:30px">
+
+                            			doc:id=&quot;b64f36db-1992-42b5-bef0-9608dd022ccf&quot;&gt;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        21
+                    </td>
+                    <td style="text-indent:30px">
+
+                            			&lt;ee:message&gt;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        22
+                    </td>
+                    <td style="text-indent:30px">
+
+                            			&lt;/ee:message&gt;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        23
+                    </td>
+                    <td style="text-indent:30px">
+
+                            			&lt;ee:variables&gt;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        24
+                    </td>
+                    <td style="text-indent:40px">
+
+                            				&lt;ee:set-variable variableName=&quot;httpStatus&quot; &gt;&lt;![CDATA[%dw 2.0
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        25
+                    </td>
+                    <td>
+
+                            output application/java
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        26
+                    </td>
+                    <td>
+
+                            
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        27
+                    </td>
+                    <td>
+
+                            var status = Mule::p(error.errorType.identifier)
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        28
+                    </td>
+                    <td>
+
+                            ---
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        29
+                    </td>
+                    <td>
+
+                            if(isEmpty(status))
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        30
+                    </td>
+                    <td style="text-indent:10px">
+
+                            	500
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        31
+                    </td>
+                    <td>
+
+                            else
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        32
+                    </td>
+                    <td style="text-indent:10px">
+
+                            	status as Number]]&gt;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        33
+                    </td>
+                    <td style="text-indent:40px">
+
+                            				&lt;/ee:set-variable&gt;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        34
+                    </td>
+                    <td style="text-indent:30px">
+
+                            			&lt;/ee:variables&gt;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        35
+                    </td>
+                    <td style="text-indent:20px">
+
+                            		&lt;/ee:transform&gt;
+                    </td>
+                </tr>
+                    <tr class="covered">
+
+                    <td class="code-line">
+                        36
+                    </td>
+                    <td style="text-indent:20px">
+
+                            		&lt;ee:transform doc:name=&quot;Set Error Code&quot; doc:id=&quot;414b6faf-f503-4c36-8a5e-e6f8372200c0&quot; &gt;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        37
+                    </td>
+                    <td style="text-indent:30px">
+
+                            			&lt;ee:message &gt;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        38
+                    </td>
+                    <td style="text-indent:30px">
+
+                            			&lt;/ee:message&gt;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        39
+                    </td>
+                    <td style="text-indent:30px">
+
+                            			&lt;ee:variables &gt;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        40
+                    </td>
+                    <td style="text-indent:40px">
+
+                            				&lt;ee:set-variable variableName=&quot;vErrorCode&quot; &gt;&lt;![CDATA[%dw 2.0
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        41
+                    </td>
+                    <td>
+
+                            output application/java
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        42
+                    </td>
+                    <td>
+
+                            
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        43
+                    </td>
+                    <td>
+
+                            var code = error.errorType.identifier ++ &quot;_&quot; ++ vars.httpStatus
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        44
+                    </td>
+                    <td>
+
+                            ---
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        45
+                    </td>
+                    <td>
+
+                            if (isEmpty(vars.vErrorCode))
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        46
+                    </td>
+                    <td style="text-indent:10px">
+
+                            	Mule::p(code)
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        47
+                    </td>
+                    <td>
+
+                            else 
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        48
+                    </td>
+                    <td style="text-indent:20px">
+
+                            	vars.vErrorCode	]]&gt;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        49
+                    </td>
+                    <td style="text-indent:40px">
+
+                            				&lt;/ee:set-variable&gt;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        50
+                    </td>
+                    <td style="text-indent:30px">
+
+                            			&lt;/ee:variables&gt;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        51
+                    </td>
+                    <td style="text-indent:20px">
+
+                            		&lt;/ee:transform&gt;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        52
+                    </td>
+                    <td style="text-indent:20px">
+
+                            		&lt;ee:transform doc:name=&quot;Set Error Message&quot;
+                    </td>
+                </tr>
+                    <tr class="covered">
+
+                    <td class="code-line">
+                        53
+                    </td>
+                    <td style="text-indent:30px">
+
+                            			doc:id=&quot;c1d2d141-596a-4ba5-8fdc-f2dfeb03a5f4&quot;&gt;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        54
+                    </td>
+                    <td style="text-indent:30px">
+
+                            			&lt;ee:message&gt;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        55
+                    </td>
+                    <td style="text-indent:40px">
+
+                            				&lt;ee:set-payload
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        56
+                    </td>
+                    <td style="text-indent:50px">
+
+                            					resource=&quot;scripts/dwl/error-msg-as-json.dwl&quot; /&gt;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        57
+                    </td>
+                    <td style="text-indent:30px">
+
+                            			&lt;/ee:message&gt;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        58
+                    </td>
+                    <td style="text-indent:20px">
+
+                            		&lt;/ee:transform&gt;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        59
+                    </td>
+                    <td style="text-indent:20px">
+
+                            		&lt;set-variable value=&quot;#[payload]&quot;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        60
+                    </td>
+                    <td style="text-indent:30px">
+
+                            			doc:name=&quot;Set Log Exception&quot;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        61
+                    </td>
+                    <td style="text-indent:30px">
+
+                            			doc:id=&quot;3b14de38-66ab-4e12-9e3d-cbad06d848f8&quot;
+                    </td>
+                </tr>
+                    <tr class="covered">
+
+                    <td class="code-line">
+                        62
+                    </td>
+                    <td style="text-indent:30px">
+
+                            			variableName=&quot;vLogException&quot; /&gt;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        63
+                    </td>
+                    <td style="text-indent:20px">
+
+                            		&lt;flow-ref doc:name=&quot;error-logger-flow&quot;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        64
+                    </td>
+                    <td style="text-indent:30px">
+
+                            			doc:id=&quot;d546ace1-47a9-4383-bcbe-8b82a0a2fba5&quot;
+                    </td>
+                </tr>
+                    <tr class="covered">
+
+                    <td class="code-line">
+                        65
+                    </td>
+                    <td style="text-indent:30px">
+
+                            			name=&quot;error-logger-flow&quot; /&gt;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        66
+                    </td>
+                    <td style="text-indent:20px">
+
+                            		&lt;remove-variable doc:name=&quot;Remove Log Exception&quot;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        67
+                    </td>
+                    <td style="text-indent:30px">
+
+                            			doc:id=&quot;01923ea2-d5a4-4f42-a96d-5910f6ae6718&quot;
+                    </td>
+                </tr>
+                    <tr class="covered">
+
+                    <td class="code-line">
+                        68
+                    </td>
+                    <td style="text-indent:30px">
+
+                            			variableName=&quot;vLogException&quot; /&gt;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        69
+                    </td>
+                    <td style="text-indent:20px">
+
+                            		&lt;flow-ref doc:name=&quot;exit-logger-flow&quot;
+                    </td>
+                </tr>
+                    <tr class="covered">
+
+                    <td class="code-line">
+                        70
+                    </td>
+                    <td style="text-indent:30px">
+
+                            			doc:id=&quot;2d22413d-11db-4480-af26-c695bd65145c&quot; name=&quot;exit-logger-flow&quot; /&gt;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        71
+                    </td>
+                    <td style="text-indent:20px">
+
+                            		&lt;error-handler&gt;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        72
+                    </td>
+                    <td style="text-indent:30px">
+
+                            			&lt;on-error-propagate enableNotifications=&quot;true&quot;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        73
+                    </td>
+                    <td style="text-indent:40px">
+
+                            				logException=&quot;true&quot; doc:name=&quot;On Error Propagate&quot;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        74
+                    </td>
+                    <td style="text-indent:40px">
+
+                            				doc:id=&quot;563f11ef-b743-4284-ae12-ecb2d0960b41&quot;&gt;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        75
+                    </td>
+                    <td style="text-indent:40px">
+
+                            				&lt;flow-ref doc:name=&quot;error-logger-flow&quot;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        76
+                    </td>
+                    <td style="text-indent:50px">
+
+                            					doc:id=&quot;d14138e5-bfe0-4d24-b159-aec4a624d11a&quot;
+                    </td>
+                </tr>
+                    <tr class="covered">
+
+                    <td class="code-line">
+                        77
+                    </td>
+                    <td style="text-indent:50px">
+
+                            					name=&quot;error-logger-flow&quot; /&gt;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        78
+                    </td>
+                    <td style="text-indent:30px">
+
+                            			&lt;/on-error-propagate&gt;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        79
+                    </td>
+                    <td style="text-indent:20px">
+
+                            		&lt;/error-handler&gt;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        80
+                    </td>
+                    <td style="text-indent:10px">
+
+                            	&lt;/flow&gt;
+                    </td>
+                </tr>
+                    <tr class="no-flow-line">
+
+                    <td class="code-line">
+                        81
+                    </td>
+                    <td>
+
+                            &lt;/mule&gt;
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        </tbody>
+    </table>
+    <h4>(*) Number of processors executed during test</h4>
+</div>
+<script type="text/javascript" src="./assets/js/tsorter.min.js"></script>
+<script type="text/javascript">
+    function init() {
+        var sorter = tsorter.create('resources_table', 0, {
+            coverage: function (row) {
+                var cov = this.getCell(row).childNodes[1].childNodes[3].attributes['aria-valuenow'].textContent;
+                return parseFloat(cov.substring(cov[0].length - 1), 10);
+            }
+        });
+    }
+
+    window.onload = init;
+
+</script>
+</body>
+</html>
