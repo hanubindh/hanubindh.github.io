@@ -1,0 +1,35 @@
+apiVersion: v1
+kind: Service
+
+metadata:
+  name: fastapi-service
+spec:
+  # type: LoadBalancer
+  type: NodePort
+  ports:
+  - port: 80
+    targetPort: 80
+    nodePort: 30080 # Comment if Loadbalancer is used
+  selector:
+    app: fastapi
+---
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: fastapi-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: fastapi
+  template:
+    metadata:
+      labels:
+        app: fastapi
+    spec:
+      containers:
+      - name: fastapi
+        image: hanubindh/hello-world-fastapi
+        ports:
+        - containerPort: 80
