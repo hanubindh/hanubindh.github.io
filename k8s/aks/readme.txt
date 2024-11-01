@@ -7,3 +7,9 @@
         kubectl get pods
     3.2 Check Service Status
         kubectl get svc fast-hello-service
+4. Get the external IP using the command described in step 3.2 and invoke the service
+    curl http://<EXTERNAL-IP>:80/hello
+5. Cleanup (Optional)
+    5.1 Delete local kubectl context
+        kubectl config delete-context myAKSCluster
+    5.2 curl https://hanubindh.github.io/k8s/aks/delete.sh --output delete.sh && chmod +x delete.sh && ./delete.sh
