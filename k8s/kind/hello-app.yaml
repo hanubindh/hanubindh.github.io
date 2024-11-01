@@ -30,6 +30,6 @@ spec:
     spec:
       containers:
       - name: fastapi
-        image: hanubindh/hello-world-fastapi
+        image: hanubindh/fast-hello
         ports:
         - containerPort: 80
