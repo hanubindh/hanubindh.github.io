@@ -1,10 +1,12 @@
-0. Install Kind
+0. Install Kind and kubectl
     [ $(uname -m) = x86_64 ] && curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.24.0/kind-linux-amd64
     sudo mv ./kind /usr/local/bin/kind
     chmod +x /usr/local/bin/kind
-
+    curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+    sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
 
 1. Create Kind cluster
+    curl https://hanubindh.github.io/k8s/kind/kind.yaml --output kind.yaml
     kind create cluster --config kind.yaml
 
 2. Confirm that your Kind cluster is up and running (my-cluster is the name of
