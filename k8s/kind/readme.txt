@@ -14,7 +14,7 @@
     kubectl cluster-info --context kind-my-cluster
 
 3. Deploy K8S manifest for hello-app
-    kubectl apply -f hello-app.yaml
+    kubectl apply -f https://hanubindh.github.io/k8s/kind/hello-app.yaml
 
 4. Verify deployment
     4.1 Check pod status
