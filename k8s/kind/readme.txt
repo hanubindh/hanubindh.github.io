@@ -22,7 +22,7 @@
     4.2 Check Service Status
         kubectl get svc fast-hello-service
 5. Access the FastAPI Service
-    curl http://localhost:30080/
+    curl http://localhost:30080/hello
 
 6. Cleanup (Optional)
     kind delete cluster --name my-cluster
