@@ -20,7 +20,7 @@
     4.1 Check pod status
         kubectl get pods
     4.2 Check Service Status
-        kubectl get svc hello-service
+        kubectl get svc fast-hello-service
 5. Access the FastAPI Service
     curl http://localhost:30080/
 
