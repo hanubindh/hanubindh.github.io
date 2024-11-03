@@ -1,6 +1,18 @@
 
 1. Get all nodes
-    kubectl get nodes
-2. Get all pods in all name spaces
+    kubectl get nodes -o wide
+
+2. Get all namespaces
+    kubectl get namespace
+
+3. Get all pods in all name spaces and (optionally) output as JSON
     kubectl get pod --all-namespaces -o json
 
+4. Get the pods in a specific namespace
+    kubectl get pods --namespace=<namespace>
+
+5. Delete a deployment 
+    kubectl delete deployment <deployment-name>
+
+6. Delete a service 
+    kubectl delete service <service-name>
