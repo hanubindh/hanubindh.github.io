@@ -22,7 +22,7 @@
 
 **Step 1**: Deploy the manifest
 
-    kubectl apply -f https://hanubindh.github.io/k8s/pwk/hello-app.yaml
+    kubectl apply -f https://raw.githubusercontent.com/hanubindh/hanubindh.github.io/refs/heads/master/k8s/pwk/hello-app.yaml
 
 **Step 2**: Verify deployment
 
@@ -33,5 +33,22 @@
 **Step 2.2**: Check Service Status
     
     kubectl get svc fast-hello-service
+    
+**Step 2.4**: Invoke service locally from any of the nodes using the Nodeport port configured in the manifest
+    (Get node IP by issuing `kubectl get nodes -o wide` - Service can be accessed from any of the Node IPs)
+    
+    curl http://<NODE-IP>:30080/hello
+
+Note: The service can now be accessed from public domain name of the PWK instance too. Copy the same from "URL" Textbox at the top.
+
+# Undeploy "fast-hello" service:
+
+**Step 1**: Delete deployment
+
+    kubectl delete deployment fast-hello-deployment
+
+**Step 2**: Delete service
+
+    kubectl delete service fast-hello-service
 
 
