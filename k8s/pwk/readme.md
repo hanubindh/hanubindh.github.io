@@ -16,3 +16,18 @@
 **Step 4**: Verify issuing following command and ensure that all nodes are listed with ready status.
     
     kubectl get nodes
+
+
+# Deploy "fast-hello" service:
+
+**Step 1**: Deploy the manifest
+
+    kubectl apply -f https://hanubindh.github.io/k8s/pwk/hello-app.yaml
+
+**Step 2**: Verify deployment
+    **Step 2.1**: Check pod status
+            kubectl get pods
+    **Step 2.2**: Check Service Status
+            kubectl get svc fast-hello-service
+
+
