@@ -25,12 +25,12 @@
     kubectl apply -f https://hanubindh.github.io/k8s/pwk/hello-app.yaml
 
 **Step 2**: Verify deployment
-    **Step 2.1**: Check pod status
+**Step 2.1**: Check pod status
     
-            kubectl get pods
+    kubectl get pods
             
-    **Step 2.2**: Check Service Status
+**Step 2.2**: Check Service Status
     
-            kubectl get svc fast-hello-service
+    kubectl get svc fast-hello-service
 
 
