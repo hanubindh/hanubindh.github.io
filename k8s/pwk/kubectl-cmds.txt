@@ -1,0 +1,6 @@
+
+1. Get all nodes
+    kubectl get nodes
+2. Get all pods in all name spaces
+    kubectl get pod --all-namespaces -o json
+
