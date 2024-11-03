@@ -3,10 +3,10 @@
 
 **Step 1**: Initialize the cluster
 
-    ```
+    `
     kubeadm init --apiserver-advertise-address $(hostname -i) --pod-network-cidr 10.5.0.0/16 &&\
     kubectl apply -f https://raw.githubusercontent.com/cloudnativelabs/kube-router/master/daemonset/kubeadm-kuberouter.yaml
-    ```
+    `
 **Step 2**: Get the command to join nodes
     kubeadm token create --print-join-command
 
