@@ -25,6 +25,7 @@
     kubectl apply -f https://hanubindh.github.io/k8s/pwk/hello-app.yaml
 
 **Step 2**: Verify deployment
+
 **Step 2.1**: Check pod status
     
     kubectl get pods
