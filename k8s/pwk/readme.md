@@ -26,8 +26,11 @@
 
 **Step 2**: Verify deployment
     **Step 2.1**: Check pod status
+    
             kubectl get pods
+            
     **Step 2.2**: Check Service Status
+    
             kubectl get svc fast-hello-service
 
 
