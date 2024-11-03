@@ -1,5 +1,5 @@
 
-#Setup K8S cluster in PW:
+# Setup K8S cluster in PW:
 
 Step 1: Initialize the cluster
     kubeadm init --apiserver-advertise-address $(hostname -i) --pod-network-cidr 10.5.0.0/16 &&\
