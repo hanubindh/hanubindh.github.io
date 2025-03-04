@@ -18,7 +18,7 @@ RUNTIME="python3.13"
 RANDOM_STRING=$(tr -dc 'a-z' < /dev/urandom | head -c 8)
 BUCKET_NAME="selpy-$RANDOM_STRING"
 REGION="us-east-1"
-AWS_ACCOUNT_ID="575108960700"
+AWS_ACCOUNT_ID="${AWS_ACCOUNT_ID}"
 
 
 
