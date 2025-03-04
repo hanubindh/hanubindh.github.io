@@ -3,23 +3,25 @@
 # Script to automate Python Lambda function setup for Selenium on Alpine (Default Docker Image)
 
 set -e  # Exit on error
-if [ -z "$AWS_KEY" ] || [ -z "$AWS_SECRET" ]; then
+if [ -z "$AWS_KEY" ] || [ -z "$AWS_SECRET" ] || [ -z "$AWS_ACCOUNT_ID" ]; then
     echo "Error: AWS_KEY, AWS_SECRET, and AWS_ACCOUNT_ID environment variables must be set."
     exit 1
 fi
 
 # Global Variables
+
+# Default settings : Update if needed
 FUNCTION_NAME="SelPy"
+REGION="us-east-1"
+RUNTIME="python3.13"
+
+# Derived variables
 LAYER_NAME="${FUNCTION_NAME}_layer"
 ROLE_NAME="lambda-${FUNCTION_NAME}-role"
 LAMBDA_POLICY_NAME="lambda-${FUNCTION_NAME}-policy"
-RUNTIME="python3.13"
 
 RANDOM_STRING=$(tr -dc 'a-z' < /dev/urandom | head -c 8)
 BUCKET_NAME="selpy-$RANDOM_STRING"
-REGION="us-east-1"
-AWS_ACCOUNT_ID="${AWS_ACCOUNT_ID}"
-
 
 
 init_env() {
