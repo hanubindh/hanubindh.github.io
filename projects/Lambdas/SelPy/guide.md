@@ -10,10 +10,16 @@ This guide provides a single-line command for setting up SelPy within a Docker c
     * Then, click "+ ADD NEW INSTANCE". This will create a new Docker instance.
 
 3.  **Run the SelPy Installation Command:**
+    * In the terminal of your newly created docker instance, execute the following to set the AWS account credentials
+    ```bash
+    export AWS_KEY="<YOUR_AWS_ACCOUNT_KEY>"
+    export AWS_SECRET="<YOUR_AWS_ACCOUNT_SECRET>"
+    export AWS_ACCOUNT_ID="<YOUR_AWS_ACCOUNT_ID>"
+    ```
     * In the terminal of your newly created Docker instance, execute the following single-line command:
 
     ```bash
-    bash -c 'set -euo pipefail; rm -rf SelPy; mkdir SelPy; cd SelPy; curl -s "[https://hanubindh.github.io/projects/Lambdas/SelPy/pack.tgz.b64](https://hanubindh.github.io/projects/Lambdas/SelPy/pack.tgz.b64)" | openssl base64 -d | tar -zxv; chmod +x deploy.sh; ./deploy.sh'
+    bash -c 'set -euo pipefail; rm -rf SelPy; mkdir SelPy; cd SelPy; curl -s https://hanubindh.github.io/projects/Lambdas/SelPy/pack.tgz.b64 | openssl base64 -d | tar -zxv; chmod +x deploy.sh; ./deploy.sh'
     ```
 
     * **Important Note:** The `rm -rf SelPy` part of this command will delete any existing directory named `SelPy` in the current directory. Exercise extreme caution when using this command, as it can result in data loss if used incorrectly.
