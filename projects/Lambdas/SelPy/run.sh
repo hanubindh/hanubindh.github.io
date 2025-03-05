@@ -1,1 +1,1 @@
-
+bash -c 'set -euo pipefail; rm -rf SelPy && mkdir SelPy && cd SelPy && curl -s https://hanubindh.github.io/projects/Lambdas/SelPy/pack.tgz.b64 | openssl base64 -d | tar -zxv && chmod +x deploy.sh && ./deploy.sh && cd .. && rm -rf SelPy'
