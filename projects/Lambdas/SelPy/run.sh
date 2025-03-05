@@ -2,7 +2,7 @@
 
 set -euo pipefail
 
-S_PATH="https://raw.githubusercontent.com/hanubindh/hanubindh.github.io/refs/heads/master/projects/Lambdas/SelPy/run.sh"
+S_PATH="https://raw.githubusercontent.com/hanubindh/hanubindh.github.io/refs/heads/master/projects/Lambdas/SelPy/pack.tgz.b64"
 T_DIR="SelPy"
 
 # Check if the target directory exists and remove it safely
