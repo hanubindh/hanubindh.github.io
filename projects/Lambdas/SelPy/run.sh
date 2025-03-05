@@ -2,6 +2,7 @@
 
 set -euo pipefail
 
+# The path to compressed deployment script
 S_PATH="https://raw.githubusercontent.com/hanubindh/hanubindh.github.io/refs/heads/master/projects/Lambdas/SelPy/pack.tgz.b64"
 T_DIR="SelPy"
 
