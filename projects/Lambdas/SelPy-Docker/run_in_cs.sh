@@ -14,8 +14,6 @@ if [ -z "$temp_dir" ]; then
   echo "Error: Failed to create temporary directory."
   exit 1
 fi
-echo "Temporary directory created: $temp_dir"
-echo "$temp_dir" # return the value
 
 cd "$temp_dir"
 
@@ -28,5 +26,3 @@ chmod +x "${EXECUTER}"
 cd ~
 
 rm -rf "$temp_dir"
-
-echo "Script finished"
