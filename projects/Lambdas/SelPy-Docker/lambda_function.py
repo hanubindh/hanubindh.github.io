@@ -1,0 +1,65 @@
+import json
+import logging
+import os
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.common.by import By
+from selenium.common.exceptions import TimeoutException, NoSuchElementException
+
+# Configure logging
+logger = logging.getLogger()
+logger.setLevel(logging.INFO)
+
+def lambda_handler(event, context):
+    driver = None  # Define the driver outside try block for proper cleanup
+    try:
+        logger.info("Lambda function started.")
+        logger.info(f"Event: {event}")
+
+        # Chrome options
+        chrome_options = Options()
+        chrome_options.add_argument("--headless")
+        chrome_options.add_argument("--disable-gpu")
+        chrome_options.add_argument("--window-size=1920x1080")
+        chrome_options.add_argument("--disable-dev-shm-usage")
+        chrome_options.add_argument("--no-sandbox")
+        chrome_options.add_argument("--disable-blink-features=AutomationControlled")
+        chrome_options.binary_location = "/opt/chrome/chrome"
+
+        driver = webdriver.Chrome(options=chrome_options)
+        driver.implicitly_wait(10)
+
+        logger.info("Navigating to https://annotationz.blogspot.com/...")
+        driver.get("https://annotationz.blogspot.com/")
+        logger.info("Navigation complete.")
+
+        logger.info("Finding and clicking the 'Express' link...")
+        try:
+            express_link = driver.find_element(By.XPATH, "//a[contains(@href, '/search/label/Express')]")
+            express_link.click()
+            logger.info("'Express' link clicked.")
+        except NoSuchElementException:
+            logger.error("Express link not found.")
+            return {"statusCode": 404, "body": json.dumps({"error": "Express link not found."})}
+
+        logger.info("Retrieving page title...")
+        page_title = driver.title
+        logger.info(f"Page title: {page_title}")
+
+        return {"statusCode": 200, "body": json.dumps({"page_title": page_title})}
+
+    except TimeoutException:
+        logger.error("Selenium operation timed out.")
+        return {"statusCode": 504, "body": json.dumps({"error": "Selenium operation timed out."})}
+
+    except Exception as e:
+        logger.exception("An error occurred:")
+        return {"statusCode": 500, "body": json.dumps({"error": str(e)})}
+
+    finally:
+        if driver:
+            logger.info("Quitting WebDriver...")
+            driver.quit()
+            logger.info("WebDriver quit.")
+        
+        logger.info("Lambda function finished.")
