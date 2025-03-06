@@ -6,7 +6,8 @@ set -e
 # Global Variables
 FUNCTION_NAME="SelPyContainerFun"
 REGION="us-east-1"
-ECR_REPO_NAME="$FUNCTION_NAME-repo"
+LOWERCASE_FUNCTION_NAME=$(echo "$FUNCTION_NAME" | tr '[:upper:]' '[:lower:]')
+ECR_REPO_NAME="${LOWERCASE_FUNCTION_NAME}-repo"
 IMAGE_TAG="latest"
 ACCOUNT_ID=$(aws sts get-caller-identity --query "Account" --output text)
 ECR_URI="$ACCOUNT_ID.dkr.ecr.$REGION.amazonaws.com/$ECR_REPO_NAME:$IMAGE_TAG"
