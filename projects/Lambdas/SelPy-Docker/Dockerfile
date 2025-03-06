@@ -18,8 +18,7 @@ COPY chromedriver-bin/ $CHROMEDRIVER_DIR/
 RUN chmod +x $CHROME_BIN && chmod +x $CHROMEDRIVER_DIR/chromedriver-linux64/chromedriver
 
 # Install Python dependencies
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install selenium webdriver_manager
 
 # Copy Lambda function code
 # Note: Since we use AWS Labda base image, LAMBDA_TASK_ROOT 
