@@ -125,12 +125,13 @@ cleanup() {
     echo "Cleanup complete."
 }
 
+trap cleanup EXIT
+
 # Run deployment steps
 fetch_latest_chrome_and_driver
 create_ecr_repo
 build_and_push_docker
 create_lambda_role
 deploy_lambda
-cleanup
 
 echo "Deployment of function (ARN: ${LAMBDA_FUN_ARN}) completed..."
