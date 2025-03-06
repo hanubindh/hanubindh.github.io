@@ -44,7 +44,8 @@ create_ecr_repo() {
     echo "Checking if ECR repository exists..."
     if ! aws ecr describe-repositories --repository-names "$ECR_REPO_NAME" --region "$REGION" > /dev/null 2>&1; then
         echo "Creating ECR repository: $ECR_REPO_NAME"
-        aws ecr create-repository --repository-name "$ECR_REPO_NAME" --region "$REGION"
+        ECR_REPO_ARN=$(aws ecr create-repository --repository-name "$ECR_REPO_NAME" --region "$REGION" --output text --query repository.repositoryArn)
+        echo "ECR repo created with ARN ${ECR_REPO_ARN}"
     else
         echo "ECR repository already exists."
     fi
@@ -65,7 +66,7 @@ build_and_push_docker() {
 create_lambda_role() {
     echo "Ensuring IAM role exists..."
     if ! aws iam get-role --role-name "lambda-execution-role" > /dev/null 2>&1; then
-        aws iam create-role --role-name lambda-execution-role \
+        LAMBDA_ROLE_ARN=$(aws iam create-role --role-name lambda-execution-role \
             --assume-role-policy-document '{
                 "Version": "2012-10-17",
                 "Statement": [{
@@ -74,7 +75,10 @@ create_lambda_role() {
                     "Action": "sts:AssumeRole"
                 }]
             }' \
-            --region "$REGION"
+            --region "$REGION" \
+            --output text \
+            --query Role.Arn)
+        echo "Lambda role created with ARN ${LAMBDA_ROLE_ARN}"
         aws iam attach-role-policy --role-name lambda-execution-role \
             --policy-arn arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole
         echo "IAM role created and policy attached."
