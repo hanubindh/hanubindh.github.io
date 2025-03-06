@@ -11,20 +11,18 @@ logger = logging.getLogger()
 logger.setLevel(logging.INFO)
 
 def lambda_handler(event, context):
-    driver = None  # Define the driver outside try block for proper cleanup
     try:
         logger.info("Lambda function started.")
         logger.info(f"Event: {event}")
 
-        # Chrome options
         chrome_options = Options()
         chrome_options.add_argument("--headless")
         chrome_options.add_argument("--disable-gpu")
         chrome_options.add_argument("--window-size=1920x1080")
         chrome_options.add_argument("--disable-dev-shm-usage")
         chrome_options.add_argument("--no-sandbox")
-        chrome_options.add_argument("--disable-blink-features=AutomationControlled")
-        chrome_options.binary_location = "/opt/chrome/chrome"
+        chrome_options.binary_location = "/opt/chrome/chrome-linux64/chrome"
+
 
         driver = webdriver.Chrome(options=chrome_options)
         driver.implicitly_wait(10)
@@ -46,6 +44,10 @@ def lambda_handler(event, context):
         page_title = driver.title
         logger.info(f"Page title: {page_title}")
 
+        logger.info("Quitting WebDriver...")
+        driver.quit()
+        logger.info("WebDriver quit.")
+
         return {"statusCode": 200, "body": json.dumps({"page_title": page_title})}
 
     except TimeoutException:
@@ -55,11 +57,6 @@ def lambda_handler(event, context):
     except Exception as e:
         logger.exception("An error occurred:")
         return {"statusCode": 500, "body": json.dumps({"error": str(e)})}
-
+    
     finally:
-        if driver:
-            logger.info("Quitting WebDriver...")
-            driver.quit()
-            logger.info("WebDriver quit.")
-        
         logger.info("Lambda function finished.")
