@@ -22,8 +22,11 @@ cd "$temp_dir"
 curl -sfSL "${BASE_PATH}/${DOCKER_FILE}" -o "${DOCKER_FILE}"
 curl -sfSL "${BASE_PATH}/${FUN_FILE}" -o "${FUN_FILE}"
 curl -sfSL "${BASE_PATH}/${EXECUTER}" -o "${EXECUTER}"
-chmod +x "./${EXECUTER}" 
+chmod +x "${EXECUTER}" 
+./"${EXECUTER}"
+
 cd ~
+
 rm -rf "$temp_dir"
 
 echo "Script finished"
